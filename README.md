@@ -10,3 +10,7 @@ Rama encargada del aumento en el ritmo cardíaco y la fuerza de contracción del
 
 -**Sistema Parasimpático**:
 Rama encarcaga de redicr el ritmo cardíaco y la recuperación de este mismo, esto lo logra a través del control de la frecuencia durante el descanso. El Nervio Vago, asociado al parasimpático, disminuye la actividad del nodo Sinoaricular, logrando así una frecuencia cardíaca mas baja y variada, la cual indica un estado de relajación y recuperación del organismo.
+ 
+### (HRV) Variabilidad de la Frecuencia Cardíaca.
+Es la encargada de medir las fluctuaciones en los intervalos entre latidos consecutivos, intervalos R-R, reflejando la capacidad del Sistema Nervioso Autónomo para adaptar la frecuencia cardíaca en función de las necesidades del organismo. Una HRV alta indica una mayot capacidad de flexibilidad y adaptación del sistema cardíaco, 
+
