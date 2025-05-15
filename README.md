@@ -209,6 +209,10 @@ Los parámetros calculados proporcionan información crítica sobre la salud car
 
 El análisis de la HRV en el dominio del tiempo es una herramienta valiosa para evaluar la salud cardiovascular y la función del sistema nervioso autónomo. Al centrarse en los intervalos R-R y sus propiedades estadísticas, proporciona una visión clara de la variabilidad en la frecuencia cardíaca y su relación con el bienestar general.
 
+## ANÁLISIS DE LA HRV EN EL DOMINIO DEL TIEMPO.
+
+##  APLICACIÓN DE TRANSFORMADA WAVELET.
+
 ### Transformada Wavelet Morlet
 La transformada wavelet utilizada fue la wavelet Morlet. Esta wavelet es apropiada para análisis de señales como ECG debido a su capacidad de representar frecuencias de oscilación, permitiendo identificar patrones transitorios y cambios en la frecuencia a lo largo del tiempo. Además, la wavelet de Morlet es adecuada para capturar tanto componentes de baja como de alta frecuencia en una señal compleja como el ECG, donde eventos breves o transitorios pueden contener información significativa (como latidos del corazón, arritmias, etc.).
 
