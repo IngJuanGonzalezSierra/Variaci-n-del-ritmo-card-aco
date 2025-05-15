@@ -33,6 +33,8 @@ Los valores de potencia de LF y HF suelen ser más altos en jóvenes porque hay 
 
 La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicada por una ventana gaussiana, lo que le da la capacidad de detectar eventos localizados en una señal. Se trata de una wavelet compleja y continua, que permite obtener una representación detallada y continua de la señal en diferentes escalas de frecuencia a lo largo del tiempo. Esto es ideal para señales no estacionarias, como el ECG, donde las características pueden variar con el tiempo.
 
+![Image](https://github.com/user-attachments/assets/08485de3-60d5-434f-88e6-a705a992c278)
+
 ### Características Clave de la Transformada Wavelet Morlet
 
 - **Continuidad**:  
