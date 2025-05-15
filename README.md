@@ -57,6 +57,10 @@ En la siguiente imagem podremos ver la señal original tomada en un rango de 5 m
 
 ![Image](https://github.com/user-attachments/assets/8c23111f-4ef4-4376-b923-fefc966d97ed)
 
+Señal original y filtrada de 10 segundos: 
+
+![Image](https://github.com/user-attachments/assets/982ef5c5-2d63-4a64-b319-c64cfbc1eadd)
+
 # Análisis de Señal ECG con Filtro Pasa Banda Butterworth y Detección de Picos R
 
 Este proyecto analiza señales de ECG (electrocardiograma) utilizando un filtro pasa banda Butterworth para mejorar la calidad de la señal y detectar picos R con precisión. La información obtenida permite calcular los intervalos R-R, fundamentales para evaluar la variabilidad de la frecuencia cardíaca (HRV). A continuación, se detallan todos los aspectos técnicos, la justificación de los parámetros y las funcionalidades del código.
