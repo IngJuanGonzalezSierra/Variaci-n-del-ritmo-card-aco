@@ -65,7 +65,20 @@ Para la adquisición de la señal ECG, utilizé un sensor AD8232 conectado a tre
 
 ![Image](https://github.com/user-attachments/assets/190cfb15-f3cf-4a17-a153-86f4d08eeea9)
 
-Los electrodos fueron colocados sobre la piel limpia de la persona, capturando la actividad eléctrica del corazón y enviando la señal al sensor AD8232. Este se conectó a una STM que, a través de un cable USB-C, transmitió los datos por conexión serial al computador. En el computador, una interfaz desarrollada en Python recibió y mostró la señal en tiempo real, además de guardar los datos adquiridos en un archivo .txt para su posterior procesamiento. Esta configuración permitió una adquisición eficiente y confiable de la señal ECG, manteniendo la calidad y la integridad de los datos para el análisis posterior
+Los electrodos fueron colocados sobre la piel limpia de la persona, capturando la actividad eléctrica del corazón y enviando la señal al sensor AD8232. Este se conectó a una STM que, a través de un cable USB-C, transmitió los datos por conexión serial al computador. En el computador, una interfaz desarrollada en Python recibió y mostró la señal en tiempo real, además de guardar los datos adquiridos en un archivo .txt para su posterior procesamiento. Esta configuración permitió una adquisición eficiente y confiable de la señal ECG, manteniendo la calidad y la integridad de los datos para el análisis posterior.
+
+### Parámetros Técnicos
+- **Frecuencia de muestreo**: 1000 Hz, lo que significa que se registraron 1000 muestras por segundo. Esto es una frecuencia adecuada para captar detalles rápidos de la señal de ECG, ya que los eventos cardíacos importantes, como los picos QRS, tienen una duración de milisegundos.
+
+- **Tiempo de muestreo**: Con una frecuencia de muestreo de 1000 Hz, el tiempo de muestreo es de 0.001 segundos (1 ms), lo que asegura que se capturen todos los eventos significativos de la señal cardíaca sin distorsión.
+
+- **Niveles de cuantificación**: Es el proceso de asignar un valor discreto a cada muestra, convirtiendo así el valor analógico continuo en un valor digital. Se usaron 50 bytes para la cuantificación, es decir, por cada 0.001 segundos se reciben 50 datos.
+
+- **Media de la señal ECG**: Hace referencia al valor promedio del intervalo R-R (tiempo entre dos picos R consecutivos en el ECG) a lo largo de los 5 minutos de grabación. La media de nuestra señal es de **984.21 ms**, lo que nos indica una frecuencia cardíaca promedio de aproximadamente 61 latidos por minuto (1 latido cada 984.21 ms).
+
+- **Desviación estándar**: Indica la variabilidad en los intervalos R-R. Nuestra desviación estándar es de **329.42 ms**, lo que sugiere que la frecuencia cardíaca varía de un latido a otro, lo cual es normal y esperado en un ECG humano. La HRV se mide precisamente a través de esta variación entre intervalos R-R, y un valor moderado de desviación estándar en este rango sugiere una flexibilidad del sistema cardíaco que puede ser mejorada.
+
+## FILTROS
 
 # Análisis de Señal ECG con Filtro Pasa Banda Butterworth y Detección de Picos R
 
@@ -193,3 +206,31 @@ Los parámetros calculados proporcionan información crítica sobre la salud car
 ## Conclusión.
 
 El análisis de la HRV en el dominio del tiempo es una herramienta valiosa para evaluar la salud cardiovascular y la función del sistema nervioso autónomo. Al centrarse en los intervalos R-R y sus propiedades estadísticas, proporciona una visión clara de la variabilidad en la frecuencia cardíaca y su relación con el bienestar general.
+
+### Transformada Wavelet Morlet
+La transformada wavelet utilizada fue la wavelet Morlet. Esta wavelet es apropiada para análisis de señales como ECG debido a su capacidad de representar frecuencias de oscilación, permitiendo identificar patrones transitorios y cambios en la frecuencia a lo largo del tiempo. Además, la wavelet de Morlet es adecuada para capturar tanto componentes de baja como de alta frecuencia en una señal compleja como el ECG, donde eventos breves o transitorios pueden contener información significativa (como latidos del corazón, arritmias, etc.).
+
+Para efectos de una mejor visualización del espectrograma, inicialmente se analizará el espectrograma de la señal completa es decir de los 5 minutos y luego de un fragmento de 30 segundos.
+
+### Espectrograma de la Transformada Wavelet Morlet (5 minutos)
+![image](https://github.com/user-attachments/assets/14759483-77b8-4220-9fa6-a84cae1a2591)
+En el espectrograma de la señal EKG completa (300 segundos), que abarca un rango de frecuencias de 0 a 100 Hz, se observa una serie de líneas verticales que indican actividad periódica en todo el rango temporal.
+
+- **Banda de baja frecuencia (0 a 20 Hz):** Esta banda, que es relevante para observar los componentes fundamentales del ECG como las ondas P, T y el complejo QRS, muestra una periodicidad marcada, lo que corresponde a la actividad regular del corazón. Sin embargo, no parece haber picos claros o variaciones destacadas en la potencia a lo largo del tiempo, lo que indica que no hay cambios abruptos en la actividad cardíaca durante los 5 minutos de registro. Esto es consistente con un ritmo cardíaco estable.
+
+- **Banda de alta frecuencia (20 a 100 Hz):** Las frecuencias más altas están generalmente relacionadas con ruido electromiográfico (EMG) o interferencias ambientales. Aunque no se observan picos muy pronunciados en esta banda, sí se observan algunos patrones más intensos en las frecuencias altas. Sin embargo, en este espectrograma de 5 minutos, la actividad de alta frecuencia parece mantenerse constante y no sugiere ninguna anomalía o evento de alta energía durante el período de análisis.
+
+El espectrograma de 5 minutos refleja un ECG estable sin grandes cambios en la potencia espectral tanto en las frecuencias bajas (asociadas a la actividad cardíaca) como en las altas (posiblemente ruido o actividad menor).
+
+### Espectrograma de la Transformada Wavelet Morlet (30 segundos)
+![image](https://github.com/user-attachments/assets/11baae30-b91c-46ea-b9fe-3cdc1b88fb36)
+El espectrograma de 30 segundos proporciona una vista más detallada y permite observar eventos con mayor precisión.
+
+- **Banda de baja frecuencia (0 a 20 Hz):** En esta banda, se observan picos claros en color verde y azul claro, lo que indica variaciones en la potencia espectral. Estas variaciones estan relacionadas con los latidos del corazón, más específicamente con las ondas R (pico principal del complejo QRS en el ECG), que suelen tener un alto contenido energético. Los picos periódicos en esta banda reflejan la actividad cíclica del corazón, y los colores más claros (verde/azul claro) indican un aumento de la potencia en esos momentos, lo que corresponde a los latidos del corazón o a eventos específicos del ciclo cardíaco.
+
+- **Banda de alta frecuencia (20 a 100 Hz):** En esta región también hay ciertos picos, aunque menos pronunciados, lo que podría estar asociado con ruido de alta frecuencia o actividad eléctrica relacionada con la contracción muscular del corazón. Las líneas verticales claras en esta banda corresponden a pequeñas interferencias electromiográficas o a fluctuaciones rápidas en la señal.
+
+#### Variaciones de la Frecuencia y Potencia Espectral
+A lo largo del tiempo, en la señal se observan fluctuaciones en la potencia espectral, especialmente en la banda baja, lo que indica una actividad cardíaca cíclica. Los picos verdes y azules claros sugieren que hay variaciones en la amplitud del ECG en esos puntos, lo cual representa latidos con mayor energía o variabilidad en la fuerza de los latidos. En cuanto a las frecuencias altas, no se detectan cambios sustanciales a lo largo del tiempo, lo que sugiere que el ruido o las interferencias permanecen relativamente constantes durante el periodo de análisis.
+
+Entonces, frecuencias bajas (0-20 Hz) reflejan la actividad cardíaca, con picos correspondientes a los latidos del corazón (complejos QRS) y variaciones periódicas en la potencia espectral y frecuencias altas (20-100 Hz) están más relacionadas con ruido o actividad de alta frecuencia, pero en este caso, no hay eventos de alta energía que sugieran anomalías significativas.
