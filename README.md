@@ -51,14 +51,18 @@ La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicad
 +----------------------------+
 |          INICIO           |
 +----------------------------+
+
               ↓
+              
 +----------------------------+
 | 1. Investigación teórica   |
 | - SNA simpático/parasim.  |
 | - HRV y R-R                |
 | - Transformada Wavelet     |
 +----------------------------+
+
               ↓
+              
 +----------------------------+
 | 2. Diseño del protocolo    |
 | - Sujeto de prueba         |
