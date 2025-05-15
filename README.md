@@ -53,4 +53,5 @@ https://www.mymap.ai/playground?mid=vAOwDxaSZ2FA0&is_share=true
 
 ## Adquisición de la Señal.
 
-En la siguiente imagem podremos ver la señal original tomada en un rango de 5 minutos y un fragmento de 10 segundos para lograr distinguir los picos R-R y tener un mejor análisis de la señal
+En la siguiente imagem podremos ver la señal original tomada en un rango de 5 minutos y un fragmento de 10 segundos para lograr distinguir los picos R-R y tener un mejor análisis de la señal.
+![Image](https://github.com/user-attachments/assets/8c23111f-4ef4-4376-b923-fefc966d97ed)
