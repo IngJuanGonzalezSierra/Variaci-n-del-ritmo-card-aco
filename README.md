@@ -33,3 +33,68 @@ Los valores de potencia de LF y HF suelen ser más altos en jóvenes porque hay 
 
 La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicada por una ventana gaussiana, lo que le da la capacidad de detectar eventos localizados en una señal. Se trata de una wavelet compleja y continua, que permite obtener una representación detallada y continua de la señal en diferentes escalas de frecuencia a lo largo del tiempo. Esto es ideal para señales no estacionarias, como el ECG, donde las características pueden variar con el tiempo.
 
+### Características Clave de la Transformada Wavelet Morlet
+
+- **Continuidad**:  
+  Al ser una wavelet continua, la Transformada Wavelet Morlet ofrece una representación fluida en el tiempo, lo que facilita el análisis detallado de cada instante de la señal.
+
+- **Resolución en tiempo y frecuencia**:  
+  La Morlet wavelet tiene una alta precisión tanto en el dominio del tiempo como en el de la frecuencia, lo cual es ideal para identificar cambios graduales o rápidos en la señal.
+
+- **Forma Gaussiana**:  
+  La función de Morlet está modulada por una envolvente gaussiana, lo que permite una transición suave entre las escalas de frecuencia y minimiza el ruido en el análisis de los picos y variaciones de la señal de ECG.
+
+- **Uso en análisis local**:  
+  Esta wavelet es particularmente útil para detectar cambios sutiles en cortos períodos de tiempo dentro de la señal de ECG, capturando patrones rápidos y eventos de interés en la frecuencia cardíaca.
+
+
++----------------------------+
+|          INICIO           |
++----------------------------+
+              ↓
++----------------------------+
+| 1. Investigación teórica   |
+| - SNA simpático/parasim.  |
+| - HRV y R-R                |
+| - Transformada Wavelet     |
++----------------------------+
+              ↓
++----------------------------+
+| 2. Diseño del protocolo    |
+| - Sujeto de prueba         |
+| - Grabación 5 min en reposo|
++----------------------------+
+              ↓
++----------------------------+
+| 3. Adquisición de ECG      |
+| - Conexión y calidad de señal|
+| - Frecuencia de muestreo   |
++----------------------------+
+              ↓
++----------------------------+
+| 4. Preprocesamiento        |
+| - Filtro IIR               |
+| - Eliminación de ruido     |
++----------------------------+
+              ↓
++----------------------------+
+| 5. Detección de picos R    |
+| - Intervalos R-R           |
++----------------------------+
+              ↓
++----------------------------+
+| 6. Análisis de HRV         |
+| - Dominio del tiempo       |
+| - Transformada Wavelet     |
++----------------------------+
+              ↓
++----------------------------+
+| 7. Interpretación de       |
+| resultados                 |
+| - Actividad simpática/par.|
+| - Potencia LF/HF           |
++----------------------------+
+              ↓
++----------------------------+
+|           FIN             |
++----------------------------+
