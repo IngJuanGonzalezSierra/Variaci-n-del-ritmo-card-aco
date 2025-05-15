@@ -47,58 +47,10 @@ La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicad
 - **Uso en análisis local**:  
   Esta wavelet es particularmente útil para detectar cambios sutiles en cortos períodos de tiempo dentro de la señal de ECG, capturando patrones rápidos y eventos de interés en la frecuencia cardíaca.
 
+  ##Diagrama de Flujo del Plan de Acción para cumplir la práctica.
 
-+----------------------------+
-|          INICIO           |
-+----------------------------+
+https://www.mymap.ai/playground?mid=vAOwDxaSZ2FA0&is_share=true
 
-              ↓
-              
-+----------------------------+
-| 1. Investigación teórica   |
-| - SNA simpático/parasim.  |
-| - HRV y R-R                |
-| - Transformada Wavelet     |
-+----------------------------+
+## Adquisición de la Señal.
 
-              ↓
-              
-+----------------------------+
-| 2. Diseño del protocolo    |
-| - Sujeto de prueba         |
-| - Grabación 5 min en reposo|
-+----------------------------+
-              ↓
-+----------------------------+
-| 3. Adquisición de ECG      |
-| - Conexión y calidad de señal|
-| - Frecuencia de muestreo   |
-+----------------------------+
-              ↓
-+----------------------------+
-| 4. Preprocesamiento        |
-| - Filtro IIR               |
-| - Eliminación de ruido     |
-+----------------------------+
-              ↓
-+----------------------------+
-| 5. Detección de picos R    |
-| - Intervalos R-R           |
-+----------------------------+
-              ↓
-+----------------------------+
-| 6. Análisis de HRV         |
-| - Dominio del tiempo       |
-| - Transformada Wavelet     |
-+----------------------------+
-              ↓
-+----------------------------+
-| 7. Interpretación de       |
-| resultados                 |
-| - Actividad simpática/par.|
-| - Potencia LF/HF           |
-+----------------------------+
-              ↓
-+----------------------------+
-|           FIN             |
-+----------------------------+
+En la siguiente imagem podremos ver la señal original tomada en un rango de 5 minutos y un fragmento de 10 segundos para lograr distinguir los picos R-R y tener un mejor análisis de la señal
