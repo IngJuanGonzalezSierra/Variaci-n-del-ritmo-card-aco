@@ -1,4 +1,4 @@
-# Variaci-n-del-ritmo-card-aco
+# lABORATORIO 5: VARIABILIDAD DEL LA FRECUENCIA CARDIACA
 
 ## Investigación teórica
 
@@ -47,7 +47,7 @@ La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicad
 - **Uso en análisis local**:  
   Esta wavelet es particularmente útil para detectar cambios sutiles en cortos períodos de tiempo dentro de la señal de ECG, capturando patrones rápidos y eventos de interés en la frecuencia cardíaca.
 
-  ##Diagrama de Flujo del Plan de Acción para cumplir la práctica.
+  ## Diagrama de Flujo del Plan de Acción para cumplir la práctica.
 
 https://www.mymap.ai/playground?mid=vAOwDxaSZ2FA0&is_share=true
 
