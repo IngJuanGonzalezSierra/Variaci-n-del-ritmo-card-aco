@@ -66,8 +66,8 @@ Este proyecto analiza señales de ECG (electrocardiograma) utilizando un filtro 
 ## Parámetros del Proyecto
 
 - **Frecuencia de Muestreo (fs)**: 1000 Hz
-- **Frecuencia de Corte Inferior (`lowcut`)**: 0.5 Hz
-- **Frecuencia de Corte Superior (`highcut`)**: 100 Hz
+- **Frecuencia de Corte Inferior (lowcut)**: 0.5 Hz
+- **Frecuencia de Corte Superior (highcut)**: 100 Hz
 - **Orden del Filtro**: 4
 - **Filtrado Causal Doble (filtfilt)**: Sí, para eliminar el retardo de fase
 
