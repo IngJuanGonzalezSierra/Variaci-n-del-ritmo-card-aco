@@ -132,15 +132,16 @@ El script genera varios gráficos para facilitar el análisis y evaluación del 
 El análisis de la variabilidad de la frecuencia cardíaca (HRV) en el dominio del tiempo utilizando datos de electrocardiograma (ECG). El análisis de la HRV es fundamental para evaluar la salud cardiovascular y la respuesta del sistema nervioso autónomo. A continuación, se describen los pasos y técnicas utilizados en este análisis.
 
 
-## Introducción
+## Introducción.
 
 El análisis de la HRV en el dominio del tiempo se enfoca en calcular parámetros que describen la variabilidad de los intervalos R-R (el tiempo entre picos R consecutivos en un ECG). Este análisis es esencial para evaluar la salud cardiovascular.
 
-## Detección de Picos R
+## Detección de Picos R.
 
 El primer paso en el análisis de HRV es la detección de los picos R en la señal de ECG. Esto se logra mediante:
 
 - **Filtrado de la señal**: Se aplica un filtro (como un filtro Butterworth pasa banda) para eliminar ruidos fuera del rango de interés, típicamente entre 0.5 y 100 Hz.
+- 
 - **Identificación de picos**: Se utilizan métodos de detección, como `find_peaks` de SciPy, para identificar los picos R con un umbral basado en la media y desviación estándar de la señal filtrada.
 
 ## Cálculo de Intervalos R-R
@@ -153,7 +154,7 @@ Una vez que se han identificado los picos R, se calculan los intervalos R-R:
 
 - **Conversión a milisegundos**: Los intervalos R-R se expresan en milisegundos (ms) para facilitar la interpretación.
 
-## Cálculo de Parámetros Estadísticos
+## Cálculo de Parámetros Estadísticos.
 
 Los intervalos R-R se utilizan para calcular varios parámetros estadísticos que describen la HRV:
 
@@ -162,7 +163,8 @@ Los intervalos R-R se utilizan para calcular varios parámetros estadísticos qu
 - **Desviación estándar de los intervalos R-R**:
 
  <img src="e3.png" alt="" width="400"/>
-## Interpretación de Resultados
+ 
+## Interpretación de Resultados.
 
 Los parámetros calculados proporcionan información crítica sobre la salud cardiovascular:
 
@@ -172,11 +174,12 @@ Los parámetros calculados proporcionan información crítica sobre la salud car
 
 - **Variabilidad**: Un aumento en la desviación estándar de los intervalos R-R sugiere una mayor capacidad de adaptación del sistema nervioso autónomo.
 
-## Limitaciones y Consideraciones
+## Limitaciones y Consideraciones.
 
 - **Calidad de los Datos**: La precisión de los resultados depende de la calidad de la señal de ECG y de la eficacia de la detección de picos.
+  
 - **Interpretación Contextual**: Los resultados deben ser interpretados dentro del contexto clínico adecuado y revisados por un profesional de la salud.
 
-## Conclusión
+## Conclusión.
 
 El análisis de la HRV en el dominio del tiempo es una herramienta valiosa para evaluar la salud cardiovascular y la función del sistema nervioso autónomo. Al centrarse en los intervalos R-R y sus propiedades estadísticas, proporciona una visión clara de la variabilidad en la frecuencia cardíaca y su relación con el bienestar general.
