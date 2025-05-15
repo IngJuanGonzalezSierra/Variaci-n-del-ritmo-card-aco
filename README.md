@@ -12,5 +12,24 @@ Rama encargada del aumento en el ritmo cardíaco y la fuerza de contracción del
 Rama encarcaga de redicr el ritmo cardíaco y la recuperación de este mismo, esto lo logra a través del control de la frecuencia durante el descanso. El Nervio Vago, asociado al parasimpático, disminuye la actividad del nodo Sinoaricular, logrando así una frecuencia cardíaca mas baja y variada, la cual indica un estado de relajación y recuperación del organismo.
  
 ### (HRV) Variabilidad de la Frecuencia Cardíaca.
-Es la encargada de medir las fluctuaciones en los intervalos entre latidos consecutivos, intervalos R-R, reflejando la capacidad del Sistema Nervioso Autónomo para adaptar la frecuencia cardíaca en función de las necesidades del organismo. Una HRV alta indica una mayot capacidad de flexibilidad y adaptación del sistema cardíaco, 
+Es la encargada de medir las fluctuaciones en los intervalos entre latidos consecutivos, intervalos R-R, reflejando la capacidad del Sistema Nervioso Autónomo para adaptar la frecuencia cardíaca en función de las necesidades del organismo. Una HRV alta indica una mayot capacidad de flexibilidad y adaptación del sistema cardíaco, mientras que una HRV baja puede señalar limitaciones en la regulación autónoma o condiciones de estrés.
+
+### Frecuencias de Interés en la Variabilidad de la Frecuencia Cardíaca.
+Para el análisis de la HRV, se estudian ciertas bandas de frecuencia en los intervalos R-R:
+
+- **Frecuencia Baja (LF: 0.04 - 0.15 Hz)**:  
+  Refleja principalmente la actividad del sistema simpático, aunque también incluye elementos del parasimpático. Cambios en esta banda sugieren un cambio en la respuesta de estrés o activación del cuerpo.
+
+- **Frecuencia Alta (HF: 0.15 - 0.4 Hz)**:  
+  Se asocia principalmente con la actividad parasimpática y con la respiración. Valores altos de HF indican una buena actividad vagal y control parasimpático. Frecuencias altas son típicas en periodos de relajación o recuperación.
+
+Una relación LF/HF alta sugiere predominancia simpática, mientras que una relación baja indica mayor actividad parasimpática.
+
+A medida que una persona envejece, la HRV tiende a disminuir. Esto ocurre porque el sistema nervioso autónomo (SNA) pierde flexibilidad y capacidad de respuesta, especialmente en su componente parasimpático, que suele reducir su influencia en la frecuencia cardíaca. El valor típico de HRV normal es que la edad de 20 años suele tener una HRV media en el rango de 55-105, mientras que la edad de 60 años tiende a estar entre 25-45.
+
+Los valores de potencia de LF y HF suelen ser más altos en jóvenes porque hay más variabilidad en la frecuencia cardíaca. Esto muestra que el SNA es flexible y responde rápidamente a cambios. En adultos, la potencia espectral de LF y HF disminuye, ya que la frecuencia cardíaca se vuelve más constante, reflejando menos adaptabilidad del SNA.
+
+## Transformada Wavelet y la Wavelet Morlet
+
+La Wavelet Morlet es una onda compuesta por una exponencial compleja multiplicada por una ventana gaussiana, lo que le da la capacidad de detectar eventos localizados en una señal. Se trata de una wavelet compleja y continua, que permite obtener una representación detallada y continua de la señal en diferentes escalas de frecuencia a lo largo del tiempo. Esto es ideal para señales no estacionarias, como el ECG, donde las características pueden variar con el tiempo.
 
