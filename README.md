@@ -61,6 +61,12 @@ Señal original y filtrada de 10 segundos:
 
 ![Image](https://github.com/user-attachments/assets/982ef5c5-2d63-4a64-b319-c64cfbc1eadd)
 
+Para la adquisición de la señal ECG, utilizé un sensor AD8232 conectado a tres electrodos en una configuración específica que se detalla en la siguiente imagén.
+
+![Image](https://github.com/user-attachments/assets/190cfb15-f3cf-4a17-a153-86f4d08eeea9)
+
+Los electrodos fueron colocados sobre la piel limpia de la persona, capturando la actividad eléctrica del corazón y enviando la señal al sensor AD8232. Este se conectó a una STM que, a través de un cable USB-C, transmitió los datos por conexión serial al computador. En el computador, una interfaz desarrollada en Python recibió y mostró la señal en tiempo real, además de guardar los datos adquiridos en un archivo .txt para su posterior procesamiento. Esta configuración permitió una adquisición eficiente y confiable de la señal ECG, manteniendo la calidad y la integridad de los datos para el análisis posterior
+
 # Análisis de Señal ECG con Filtro Pasa Banda Butterworth y Detección de Picos R
 
 Este proyecto analiza señales de ECG (electrocardiograma) utilizando un filtro pasa banda Butterworth para mejorar la calidad de la señal y detectar picos R con precisión. La información obtenida permite calcular los intervalos R-R, fundamentales para evaluar la variabilidad de la frecuencia cardíaca (HRV). A continuación, se detallan todos los aspectos técnicos, la justificación de los parámetros y las funcionalidades del código.
