@@ -65,11 +65,11 @@ Este proyecto analiza señales de ECG (electrocardiograma) utilizando un filtro 
 
 ## Parámetros del Proyecto
 
-- **Frecuencia de Muestreo (fs)**: `1000 Hz`
-- **Frecuencia de Corte Inferior (`lowcut`)**: `0.5 Hz`
-- **Frecuencia de Corte Superior (`highcut`)**: `100 Hz`
-- **Orden del Filtro**: `4`
-- **Filtrado Causal Doble (`filtfilt`)**: Sí, para eliminar el retardo de fase
+- **Frecuencia de Muestreo (fs)**: 1000 Hz
+- **Frecuencia de Corte Inferior (`lowcut`)**: 0.5 Hz
+- **Frecuencia de Corte Superior (`highcut`)**: 100 Hz
+- **Orden del Filtro**: 4
+- **Filtrado Causal Doble (filtfilt)**: Sí, para eliminar el retardo de fase
 
 ---
 
@@ -78,7 +78,7 @@ Este proyecto analiza señales de ECG (electrocardiograma) utilizando un filtro 
 ### 1. Elección del Filtro Butterworth
 El filtro **Butterworth** es particularmente adecuado debido a su **respuesta de magnitud plana en la banda de paso**, que minimiza la distorsión en las frecuencias de interés. Esto asegura que las características esenciales del ECG, como los complejos QRS, se mantengan sin alteraciones, lo cual es crucial para la detección de los picos R y el análisis preciso de HRV.
 
-### 2. Frecuencia de Muestreo (`fs = 1000 Hz`)
+### 2. Frecuencia de Muestreo (fs = 1000 Hz)
 La **frecuencia de muestreo de 1000 Hz** permite capturar la señal ECG con suficiente detalle, cumpliendo además con el **Teorema de Nyquist** para evitar aliasing. La alta frecuencia de muestreo garantiza:
    - Una resolución temporal adecuada, crucial para identificar de manera precisa los picos R.
    - Estabilidad en los cálculos de variabilidad de la frecuencia cardíaca (HRV) al proporcionar datos detallados.
@@ -94,11 +94,11 @@ El rango de frecuencias **[0.5 Hz - 100 Hz]** permite aislar el contenido releva
    - Reduce el **ruido electromagnético** de alta frecuencia y otras interferencias externas.
    - Mantiene la **morfología del QRS**, necesaria para la detección precisa de picos R y el análisis de intervalos R-R.
 
-### 4. Orden del Filtro (`4`)
+### 4. Orden del Filtro (4)
 Un **filtro de orden 4** proporciona un balance óptimo entre **selectividad** (pendiente de 80 dB/decada) y **estabilidad computacional**. Esto asegura una reducción eficaz del ruido sin perder detalles importantes de la señal.
 
-### 5. Filtrado Causal Doble (`filtfilt`)
-Se utiliza la función `filtfilt` para realizar un filtrado causal doble que:
+### 5. Filtrado Causal Doble (filtfilt)
+Se utiliza la función filtfilt para realizar un filtrado causal doble que:
    - **Elimina el retardo de fase**: Esto asegura que la alineación temporal de los picos R no se vea afectada.
    - **Preserva la morfología de la señal**: Garantiza que la forma de la onda ECG se mantenga clara, lo que es crucial para el análisis de HRV.
 
